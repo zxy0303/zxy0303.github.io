@@ -11,7 +11,7 @@
     <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>
   </h3>
   <p style="font-size: .9rem; line-height: 1.5; margin: 0 0 .3rem; opacity: .8">
-    {{ range $i, $author := $item.Params.authors }}{{ if $i }}{{ if $zh }}、{{ else }}, {{ end }}{{ end }}{{ if eq $author "me" }}<strong>{{ if $zh }}赵鑫源{{ else }}Xinyuan Zhao{{ end }}</strong>{{ else if and $zh (eq $author "et al.") }}等{{ else }}{{ $author }}{{ end }}{{ end }}
+    {{ range $i, $author := $item.Params.authors }}{{ if $i }}{{ if $zh }}{{ if ne $author "et al." }}、{{ end }}{{ else }}, {{ end }}{{ end }}{{ if eq $author "me" }}<strong>{{ if $zh }}赵鑫源{{ else }}Xinyuan Zhao{{ end }}</strong>{{ else if and $zh (eq $author "et al.") }}等{{ else }}{{ $author }}{{ end }}{{ end }}
   </p>
   {{ with $pub.display_short }}<p style="font-size: .9rem; font-style: italic; margin: 0 0 .65rem; opacity: .8">{{ . | markdownify }}</p>{{ end }}
   <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
