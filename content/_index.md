@@ -16,7 +16,7 @@ sections:
     design:
       background:
         gradient_mesh:
-          enable: false
+          enable: true
       name:
         size: md
       avatar:
