@@ -14,9 +14,6 @@ sections:
         about: About Me
         interests: Research Interests
     design:
-      background:
-        gradient_mesh:
-          enable: true
       name:
         size: md
       avatar:
@@ -32,9 +29,6 @@ sections:
         I am interested in two areas: **interdisciplinary research connecting computer science and medicine**, and **applications of large language models**. I am still exploring where to focus my research and welcome challenging, meaningful problems in and beyond these areas.
     design:
       columns: '1'
-      background:
-        gradient_mesh:
-          enable: true
 
   - block: collection
     id: publications
@@ -45,7 +39,4 @@ sections:
           - publications
     design:
       view: citation
-      background:
-        gradient_mesh:
-          enable: true
 ---

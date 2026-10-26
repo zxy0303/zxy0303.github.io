@@ -1,0 +1,27 @@
+/* One continuous, quiet background for the academic homepage. */
+.page-body:has(> #about) {
+  background-color: #f8fbff;
+  background-image:
+    radial-gradient(ellipse 72% 34% at 14% 8%, color-mix(in srgb, var(--color-primary-500) 17%, transparent), transparent 76%),
+    radial-gradient(ellipse 64% 36% at 88% 48%, color-mix(in srgb, var(--color-secondary-500) 14%, transparent), transparent 78%),
+    radial-gradient(ellipse 76% 30% at 15% 88%, color-mix(in srgb, var(--color-primary-500) 9%, transparent), transparent 78%),
+    linear-gradient(180deg, #f8fbff 0%, #f8fcfb 60%, #f7faff 100%);
+  background-repeat: no-repeat;
+}
+
+.dark .page-body:has(> #about) {
+  background-color: #0f172a;
+  background-image:
+    radial-gradient(ellipse 72% 34% at 14% 8%, color-mix(in srgb, var(--color-primary-500) 15%, transparent), transparent 76%),
+    radial-gradient(ellipse 64% 36% at 88% 48%, color-mix(in srgb, var(--color-secondary-500) 10%, transparent), transparent 78%),
+    linear-gradient(180deg, #0f172a 0%, #101b2d 60%, #0f172a 100%);
+}
+
+.page-body:has(> #about) > #research,
+.page-body:has(> #about) > #publications {
+  padding-block: 3rem;
+}
+
+.page-body:has(> #about) > #publications .container.max-w-3xl {
+  margin-top: 2.5rem;
+}
