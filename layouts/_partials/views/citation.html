@@ -1,20 +1,21 @@
 {{ $item := .item }}
 {{ $year := $item.Date.Format "2006" }}
 {{ $pub := partial "functions/resolve_publication.html" $item }}
+{{ $zh := eq $item.Language.Lang "zh" }}
 
 <article class="pub-list-item view-citation" style="border-left: 3px solid #3b82f6; padding: .2rem 0 .3rem 1rem; margin-bottom: 2rem">
   <div style="font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; opacity: .65; margin-bottom: .5rem">
-    {{ $year }} · {{ if eq (index $item.Params.publication_types 0) "paper-conference" }}Conference paper{{ else }}Journal article{{ end }}
+    {{ $year }} · {{ if eq (index $item.Params.publication_types 0) "paper-conference" }}{{ if $zh }}会议论文{{ else }}Conference paper{{ end }}{{ else }}{{ if $zh }}期刊论文{{ else }}Journal article{{ end }}{{ end }}
   </div>
   <h3 style="font-size: 1.15rem; line-height: 1.4; font-weight: 600; margin: 0 0 .55rem">
     <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>
   </h3>
   <p style="font-size: .9rem; line-height: 1.5; margin: 0 0 .3rem; opacity: .8">
-    {{ range $i, $author := $item.Params.authors }}{{ if $i }}, {{ end }}{{ if eq $author "me" }}<strong>Xinyuan Zhao</strong>{{ else }}{{ $author }}{{ end }}{{ end }}
+    {{ range $i, $author := $item.Params.authors }}{{ if $i }}{{ if $zh }}、{{ else }}, {{ end }}{{ end }}{{ if eq $author "me" }}<strong>{{ if $zh }}赵鑫源{{ else }}Xinyuan Zhao{{ end }}</strong>{{ else if and $zh (eq $author "et al.") }}等{{ else }}{{ $author }}{{ end }}{{ end }}
   </p>
   {{ with $pub.display_short }}<p style="font-size: .9rem; font-style: italic; margin: 0 0 .65rem; opacity: .8">{{ . | markdownify }}</p>{{ end }}
   <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-    {{ with $item.Params.paper_url }}<a href="{{ . }}" class="underline" target="_blank" rel="noopener noreferrer">Publisher</a>{{ end }}
+    {{ with $item.Params.paper_url }}<a href="{{ . }}" class="underline" target="_blank" rel="noopener noreferrer">{{ if $zh }}出版页面{{ else }}Publisher{{ end }}</a>{{ end }}
     {{ with $item.Params.pdf_url }}<a href="{{ . }}" class="underline">PDF</a>{{ end }}
   </div>
 </article>
