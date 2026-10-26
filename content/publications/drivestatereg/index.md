@@ -1,6 +1,6 @@
 ---
 title: "DriveStateReg: A Time Window-Level State Recognition Framework for Driving Behavior Analysis"
-date: 2026-09-01
+date: 2026-10-11
 authors:
   - me
   - Shaojie Min
@@ -12,7 +12,7 @@ authors:
   - Yang Chen
 publication_types: ["paper-conference"]
 publication:
-  name: "Proceedings of the 2026 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp Companion 2026)"
+  name: "Companion of the 2026 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
   short_name: "UbiComp Companion 2026"
 summary: "A framework for recognizing fine-grained driving states from time-window-level vehicle motion signals."
 featured: true
