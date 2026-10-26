@@ -4,9 +4,9 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name (set in params.yaml under hugoblox.branding.name)
-title: ''
+title: 'Xinyuan Zhao'
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'https://zxy0303.github.io/'
 
 ############################
 ## LANGUAGE
@@ -26,6 +26,13 @@ cascade:
       path: /slides/**
       kind: page
     outputs: [HTML, present]
+  # Keep the starter content in the repository for reference, but do not publish it.
+  - build:
+      list: never
+      publishResources: false
+      render: never
+    target:
+      path: '{/blog,/blog/**,/courses,/courses/**,/events,/events/**,/projects,/projects/**,/publications,/publications/**,/slides,/slides/**,/experience}'
 
 ############################
 ## ADVANCED
