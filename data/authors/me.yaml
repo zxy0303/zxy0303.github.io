@@ -3,7 +3,7 @@ slug: me
 is_owner: true
 
 name:
-  display: Xinyuan Zhao (赵鑫源)
+  display: Xinyuan Zhao
   given: Xinyuan
   family: Zhao
 
@@ -27,6 +27,4 @@ links:
     url: https://github.com/zxy0303
     label: GitHub
 
-interests:
-  - Computer Science and Medicine
-  - Large Language Model Applications
+interests: []

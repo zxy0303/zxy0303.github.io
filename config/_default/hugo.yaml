@@ -32,7 +32,7 @@ cascade:
       publishResources: false
       render: never
     target:
-      path: '{/blog,/blog/**,/courses,/courses/**,/events,/events/**,/projects,/projects/**,/publications,/publications/**,/slides,/slides/**,/experience}'
+      path: '{/blog,/blog/**,/courses,/courses/**,/events,/events/**,/projects,/projects/**,/publications/conference-paper,/publications/journal-article,/publications/preprint,/slides,/slides/**,/experience}'
 
 ############################
 ## ADVANCED
