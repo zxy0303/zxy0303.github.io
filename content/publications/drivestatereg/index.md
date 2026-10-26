@@ -16,12 +16,8 @@ publication:
   short_name: "UbiComp Companion 2026"
 summary: "A framework for recognizing fine-grained driving states from time-window-level vehicle motion signals."
 featured: true
-hugoblox:
-  ids:
-    doi: "10.1145/3798063.3837214"
-links:
-  - type: pdf
-    url: "/papers/DriveStateReg-A-Time-Window-Level-State-Recognition-Framework-for-Driving-Behavior-Analysis.pdf"
+paper_url: "https://doi.org/10.1145/3798063.3837214"
+pdf_url: "/papers/DriveStateReg-A-Time-Window-Level-State-Recognition-Framework-for-Driving-Behavior-Analysis.pdf"
 ---
 
 This paper presents DriveStateReg, a framework for time-window-level driving state recognition. Read the [published paper](https://doi.org/10.1145/3798063.3837214) or [download the PDF](/papers/DriveStateReg-A-Time-Window-Level-State-Recognition-Framework-for-Driving-Behavior-Analysis.pdf).

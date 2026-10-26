@@ -1,0 +1,17 @@
+{{ $item := .item }}
+{{ $year := $item.Date.Format "2006" }}
+{{ $pub := partial "functions/resolve_publication.html" $item }}
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1.5rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+  <span class="article-metadata li-cite-author">
+    {{ partial "page_metadata_authors" $item }}
+  </span>
+  ({{- $year -}}).
+  <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>.
+  {{ with $pub.display_short }}{{ . | markdownify }}.{{ end }}
+  <div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm">
+    {{ with $item.Params.paper_url }}<a href="{{ . }}" class="underline" target="_blank" rel="noopener noreferrer">Publisher</a>{{ end }}
+    {{ with $item.Params.pdf_url }}<a href="{{ . }}" class="underline">PDF</a>{{ end }}
+  </div>
+</div>
